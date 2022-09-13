@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#grilla {
+    width: 100vw;
+    height: 130vh;
+    display: grid;
+    grid-template-columns: 4 repeat(1fr);
+    grid-template-rows: 0.25fr 3fr 0.10fr;
+    grid-template-areas: "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+}
+
+@font-face {
+    font-family: 'catalishHuntera';
+    src: url('../assets/fonts/catalishHuntera.ttf');
+}
+
+/* ESTILOS DE HEADER */
+.encabezado {
+    background-color: rgba(231, 224, 224, 0.938);
+    /* background-color: rgba(2, 2, 2, 0.938); poner de nuevo al terminar*/
+    /* height: 15%; */
+    position: sticky;
+    top: 0px;
+    /* background-image: url("../assets/images/fondeto.jpg");
+    background-attachment: fixed;
+    background-size: cover;  */
+    grid-area: header;
+}
+
+.enlaces {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.enlaces__hijo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-right: 5vh;
+}
+
+.enlaces__hijo li {
+    list-style-type: none;
+    font-size: 20px;
+    display: inline-block;
+    border: 0.3px solid black;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 25px;
+    background-color: rgba(168, 17, 88, 0.986);
+    position: relative;
+
+}
+
+.enlaces__hijo li a {
+    color: black;
+    text-decoration: none;
+    /*text-decoration: line-through; tachado*/
+}
+
+.encabezado img {
+    position: relative;
+    background-image: url("../assets/images/logo.png");
+    height: 12.2vh;
+    object-fit: contain;
+    margin-left: 15%;
+
+}
+
+
+
+
+/*ESTILOS DE MAIN*/
+main {
+    /* background-color: black; */
+    /* height: 75%; */
+    background-image: url("../assets/images/fondeto.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 40px;
+    grid-area: main;
+}
+
+.subtitulo {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: oblique;
+    line-height: 1.4;
+    color: white;
+    padding-bottom: 3vh;
+}
+
+/* index */
+.contenido_principal__izq {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    padding-right: 50px;
+    color: white;
+    padding-bottom: 3vh;
+
+}
+
+.contenido_principal2__der {
+    font-family: 'catalishHuntera';
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 50px;
+    color: white;
+    font-size: 0.75em;
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+}
+
+/* indumentaria */
+
+
+.indumentaria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.indumentaria tr {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 5vh;
+    
+}
+
+.indumentaria tr td img {
+    display:flex;
+    height: 320px;
+    width: 320px;
+    padding: 0px 25px 0px 25px;
+    
+}
+
+
+/* contacto */
+
+.contacto {
+    color: white;
+    text-align: center;
+    font-size: 5em;
+}
+
+.sexo {
+    color: white;
+    font-size: 1em;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+.formulario_contacto {
+    color: white;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+
+}
+
+.formu {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.video_contacto {
+    margin-left: 50px;
+    margin-top: 230px;
+    border-color: purple;
+}
+
+/*ESTILOS DE FOOTER*/
+
+footer {
+    background-color: rgba(34, 33, 33, 0.938);
+    /* height: 10%; */
+    color: rgb(226, 164, 226);
+    grid-area: footer;
+    text-align: center;
+}
+
+.social {
+    height: 1em;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1200px) {
+    #grilla {
+        width: 100vw;
+        height: 130vh;
+        display: grid;
+        grid-template-columns: 4 repeat(1fr);
+        grid-template-rows: 0.25fr 3fr 0.10fr;
+        grid-template-areas: "header header header header"
+            "main main main main"
+            "footer footer footer footer";
+    }
+
+    @font-face {
+        font-family: 'catalishHuntera';
+        src: url('../assets/fonts/catalishHuntera.ttf');
+    }
+
+    .indumentaria tr td img {
+        display:flex;
+        height: 240px;
+        width: 240px;
+        padding: 0px 20px 0px 20px;
+        
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    #grilla {
+        width: 100vw;
+        height: 130vh;
+        display: grid;
+        grid-template-columns: 4 repeat(1fr);
+        grid-template-rows: 0.25fr 3fr 0.10fr;
+        grid-template-areas: "header header header header"
+            "main main main main"
+            "footer footer footer footer";
+    }
+
+    @font-face {
+        font-family: 'catalishHuntera';
+        src: url('../assets/fonts/catalishHuntera.ttf');
+    }
+
+    .encabezado {
+        background-color: rgba(231, 224, 224, 0.938);
+        /* background-color: rgba(2, 2, 2, 0.938); poner de nuevo al terminar*/
+        /* height: 15%; */
+        position: sticky;
+        top: 0px;
+        /* background-image: url("../assets/images/fondeto.jpg");
+        background-attachment: fixed;
+        background-size: cover;  */
+        grid-area: header;
+    }
+
+    .encabezado img {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .contenido_principal__izq {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: justify;
+        padding-right: 0px;
+        color: white;
+        padding-bottom: 3vh;
+
+    }
+
+    .contenido_principal2__der {
+        font-family: 'catalishHuntera';
+        text-transform: uppercase;
+        text-align: center;
+        padding-left: 0px;
+        color: white;
+        font-size: 0.75em;
+    }
+
+    .indumentaria tr td img {
+        display:flex;
+        height: 180px;
+        width: 180px;
+        padding: 0px 18px 0px 18px;
+        
+    }
+
+}
+
+@media only screen and (max-width: 468px) {
+    #grilla {
+        width: 100vw;
+        height: 130vh;
+        display: grid;
+        grid-template-columns: 4 repeat(1fr);
+        grid-template-rows: 0.25fr 3fr 0.10fr;
+        grid-template-areas: "header header header header"
+            "main main main main"
+            "footer footer footer footer";
+    }
+
+    @font-face {
+        font-family: 'catalishHuntera';
+        src: url('../assets/fonts/catalishHuntera.ttf');
+    }
+
+    .encabezado {
+        background-color: rgba(231, 224, 224, 0.938);
+        /* background-color: rgba(2, 2, 2, 0.938); poner de nuevo al terminar*/
+        /* height: 15%; */
+        position: sticky;
+        top: 0px;
+        /* background-image: url("../assets/images/fondeto.jpg");
+        background-attachment: fixed;
+        background-size: cover;  */
+        grid-area: header;
+
+    }
+
+    .encabezado img {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .contenido_principal__izq {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: justify;
+        padding-right: 0px;
+        color: white;
+        padding-bottom: 3vh;
+
+    }
+
+    .contenido_principal2__der {
+        font-family: 'catalishHuntera';
+        text-transform: uppercase;
+        text-align: center;
+        padding-left: 0px;
+        color: white;
+        font-size: 0.75em;
+    }
+}
